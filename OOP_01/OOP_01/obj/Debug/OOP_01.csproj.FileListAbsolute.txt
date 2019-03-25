@@ -1,0 +1,11 @@
+G:\УЧЁБА\ООП_CS (Forms)\OOP_01\OOP_01\bin\Debug\OOP_01.exe.config
+G:\УЧЁБА\ООП_CS (Forms)\OOP_01\OOP_01\bin\Debug\OOP_01.exe
+G:\УЧЁБА\ООП_CS (Forms)\OOP_01\OOP_01\bin\Debug\OOP_01.pdb
+G:\УЧЁБА\ООП_CS (Forms)\OOP_01\OOP_01\obj\Debug\OOP_01.csprojAssemblyReference.cache
+G:\УЧЁБА\ООП_CS (Forms)\OOP_01\OOP_01\obj\Debug\OOP_01.Form1.resources
+G:\УЧЁБА\ООП_CS (Forms)\OOP_01\OOP_01\obj\Debug\OOP_01.Properties.Resources.resources
+G:\УЧЁБА\ООП_CS (Forms)\OOP_01\OOP_01\obj\Debug\OOP_01.csproj.GenerateResource.cache
+G:\УЧЁБА\ООП_CS (Forms)\OOP_01\OOP_01\obj\Debug\OOP_01.csproj.CoreCompileInputs.cache
+G:\УЧЁБА\ООП_CS (Forms)\OOP_01\OOP_01\obj\Debug\OOP_01.exe
+G:\УЧЁБА\ООП_CS (Forms)\OOP_01\OOP_01\obj\Debug\OOP_01.pdb
+G:\УЧЁБА\ООП_CS (Forms)\OOP_01\OOP_01\obj\Debug\OOP_01.Form2.resources

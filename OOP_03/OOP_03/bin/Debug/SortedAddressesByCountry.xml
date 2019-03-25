@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<string>a, a, a район, ул.a, дом 1, кв. 1</string><?xml version="1.0"?>
+<string>a, a, a район, ул.a, дом 1, кв. 2</string><?xml version="1.0"?>
+<string>a, a, a район, ул.a, дом 1, кв. 3</string><?xml version="1.0"?>
+<string>a, a, a район, ул.a, дом 2, кв. 1</string><?xml version="1.0"?>
+<string>Беларусь, Минск, Ленинский район, ул.Белорусская, дом 19, кв. 405а</string><?xml version="1.0"?>
+<string>Беларусь, Могилёв, Оржаникидзе район, ул.Оржаникидзе, дом 14, кв. 22</string>01/XMLSchema" /><?xml version="1.0"?>
+<Address xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />

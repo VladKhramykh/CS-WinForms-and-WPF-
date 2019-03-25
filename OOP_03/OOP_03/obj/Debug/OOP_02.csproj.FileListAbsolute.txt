@@ -1,0 +1,12 @@
+G:\УЧЁБА\ООП_CS (Forms)\OOP_02\OOP_02\obj\Debug\OOP_02.csprojAssemblyReference.cache
+G:\УЧЁБА\ООП_CS (Forms)\OOP_02\OOP_02\obj\Debug\OOP_02.appartForm.resources
+G:\УЧЁБА\ООП_CS (Forms)\OOP_02\OOP_02\obj\Debug\OOP_02.adressForm.resources
+G:\УЧЁБА\ООП_CS (Forms)\OOP_02\OOP_02\obj\Debug\OOP_02.Properties.Resources.resources
+G:\УЧЁБА\ООП_CS (Forms)\OOP_02\OOP_02\obj\Debug\OOP_02.csproj.GenerateResource.cache
+G:\УЧЁБА\ООП_CS (Forms)\OOP_02\OOP_02\obj\Debug\OOP_02.csproj.CoreCompileInputs.cache
+G:\УЧЁБА\ООП_CS (Forms)\OOP_02\OOP_02\bin\Debug\OOP_02.exe.config
+G:\УЧЁБА\ООП_CS (Forms)\OOP_02\OOP_02\bin\Debug\OOP_02.exe
+G:\УЧЁБА\ООП_CS (Forms)\OOP_02\OOP_02\bin\Debug\OOP_02.pdb
+G:\УЧЁБА\ООП_CS (Forms)\OOP_02\OOP_02\obj\Debug\OOP_02.exe
+G:\УЧЁБА\ООП_CS (Forms)\OOP_02\OOP_02\obj\Debug\OOP_02.pdb
+G:\УЧЁБА\ООП_CS (Forms)\OOP_02\OOP_02\obj\Debug\OOP_02.csproj.CopyComplete
