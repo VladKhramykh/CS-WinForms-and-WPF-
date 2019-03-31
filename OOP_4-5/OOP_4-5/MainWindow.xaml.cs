@@ -1,32 +1,11 @@
 ﻿using Microsoft.Win32;
-using System;
 using System.Windows;
-<<<<<<< HEAD
-=======
-
->>>>>>> add oop_4-5 after crash git)
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Controls;
-using System.Windows.Data;
 using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-<<<<<<< HEAD
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-=======
-using Xceed.Wpf.Samples.SampleData;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using Xceed.Wpf.Toolkit;
-using System.Windows.Controls.Primitives;
->>>>>>> add oop_4-5 after crash git)
 
 namespace OOP_4_5
 {
@@ -45,16 +24,6 @@ namespace OOP_4_5
         private Slider fontSizeSlider = new Slider();
         private ComboBox fontStylesComboBox = new ComboBox();
         private Button colorPickerButton = new Button();
-<<<<<<< HEAD
-
-        
-
-        public MainWindow()
-        {
-            InitializeComponent();
-            initButtons();
-            
-=======
         private ColorPicker colorPicker = new ColorPicker(); 
 
         public MainWindow()
@@ -63,7 +32,6 @@ namespace OOP_4_5
             initButtons();
             textBox.AddHandler(DragOverEvent, new DragEventHandler(DragItem), true);
             textBox.AddHandler(DropEvent, new DragEventHandler(DropItem), true);
->>>>>>> add oop_4-5 after crash git)
         }
 
         private void initButtons()
@@ -84,11 +52,7 @@ namespace OOP_4_5
 
             cursiveFontButton.Content = "K";
             boldFontButton.Content = "Ж";
-<<<<<<< HEAD
-            underlineFontButton.Content = "_";
-=======
             underlineFontButton.Content = "Н";
->>>>>>> add oop_4-5 after crash git)
 
             fontStylesComboBox.ItemsSource = Fonts.SystemFontFamilies;
             fontStylesComboBox.Width = 200;
@@ -105,16 +69,13 @@ namespace OOP_4_5
 
             colorPickerButton.Width = 40;
             colorPickerButton.Height = 40;
-<<<<<<< HEAD
-            colorPickerButton.Margin = new Thickness(20, 0, 0, 0); 
-=======
+
             colorPickerButton.Margin = new Thickness(20, 0, 0, 0);
 
             colorPicker.Width = 100;
             colorPicker.Height = 20;
             colorPicker.SelectedColor = Colors.Black;
-            colorPicker.Margin = new Thickness(20, 0, 0, 0);            
->>>>>>> add oop_4-5 after crash git)
+            colorPicker.Margin = new Thickness(20, 0, 0, 0);
 
             openButton.Click += new RoutedEventHandler(openButton_Click);
             saveButton.Click += new RoutedEventHandler(saveButton_Click);
@@ -125,11 +86,8 @@ namespace OOP_4_5
             boldFontButton.Click += new RoutedEventHandler(boldFontButton_Click);
             underlineFontButton.Click += new RoutedEventHandler(underlineFontButton_Click);
             fontStylesComboBox.SelectionChanged += new SelectionChangedEventHandler(selectFontStyle_Select);
-<<<<<<< HEAD
-            colorPickerButton.Click += new RoutedEventHandler(colorPickerButton_Click);
-=======
+
             colorPicker.SelectedColorChanged += new RoutedPropertyChangedEventHandler<Color?>(colorPicker_Select);
->>>>>>> add oop_4-5 after crash git)
 
         }
 
@@ -149,11 +107,8 @@ namespace OOP_4_5
             stackPanel.Children.Add(underlineFontButton);
             stackPanel.Children.Add(fontSizeSlider);
             stackPanel.Children.Add(fontStylesComboBox);
-<<<<<<< HEAD
-            stackPanel.Children.Add(colorPickerButton);
-=======
-            stackPanel.Children.Add(colorPicker);                        
->>>>>>> add oop_4-5 after crash git)
+
+            stackPanel.Children.Add(colorPicker);
             
         }
 
@@ -165,16 +120,6 @@ namespace OOP_4_5
         private void openButton_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
-<<<<<<< HEAD
-            open.Filter = "txt files (*.txt)|.txt|Word (*.docx)|*.docx|All files (*.*)|*.*";
-            if (open.ShowDialog() == true)
-            {
-                string fileName = open.FileName;
-                string fileText = File.ReadAllText(fileName, Encoding.Default);
-                TextRange textRange = new TextRange(textBox.Document.ContentStart, textBox.Document.ContentEnd);
-                textBox.Document.Blocks.Add(new Paragraph(new Run((fileText))));
-                statusText.Text = "Открытие выполнено";
-=======
             open.Filter = "Txt files (*.txt)|*.txt|Rtf files (*.rtf)|*.rtf";
             if (open.ShowDialog() == true)
             {
@@ -188,7 +133,6 @@ namespace OOP_4_5
                     fileStream.Close();
                     statusText.Text = "Открытие выполнено";
                 }
->>>>>>> add oop_4-5 after crash git)
             }
             else
                 return;
@@ -198,22 +142,14 @@ namespace OOP_4_5
         private void saveButton_Click(object sender, RoutedEventArgs e)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();            
-<<<<<<< HEAD
-            saveFileDialog.Filter = "txt files (*.txt)|*.txt|Word (*.docx)|*.docx|All files (*.*)|*.*";
-=======
             saveFileDialog.Filter = "Txt files (*.txt)|*.txt|Rtf files (*.rtf)|*.rtf";
->>>>>>> add oop_4-5 after crash git)
             saveFileDialog.FilterIndex = 1;
             if (saveFileDialog.ShowDialog() == true)
             {
                 TextRange documentTextRange = new TextRange(textBox.Document.ContentStart, textBox.Document.ContentEnd);
                 using (FileStream fs = File.Create(saveFileDialog.FileName))
                 {
-<<<<<<< HEAD
-                    documentTextRange.Save(fs, DataFormats.Text);
-=======
                     documentTextRange.Save(fs, DataFormats.Rtf);
->>>>>>> add oop_4-5 after crash git)
                     statusText.Text = "Сохранение выполнено";
                 }                
             }
@@ -243,14 +179,23 @@ namespace OOP_4_5
         private void cursiveFontButton_Click(object sender, RoutedEventArgs e)
         {
             TextSelection selectedText = textBox.Selection;
-            selectedText.ApplyPropertyValue(TextElement.FontStyleProperty, FontStyles.Italic);
+
+            if(selectedText.GetPropertyValue(TextElement.FontStyleProperty) == (object)FontStyles.Italic)
+                selectedText.ApplyPropertyValue(TextElement.FontStyleProperty, FontStyles.Normal);
+            else
+                selectedText.ApplyPropertyValue(TextElement.FontStyleProperty, FontStyles.Italic);
+
             textBox.Focus();
         }
 
         private void boldFontButton_Click(object sender, RoutedEventArgs e)
         {
             TextSelection selectedText = textBox.Selection;
-            selectedText.ApplyPropertyValue(TextElement.FontWeightProperty, FontWeights.Bold);
+
+            if (selectedText.GetPropertyValue(TextElement.FontWeightProperty) == (object)FontWeights.Bold)
+                selectedText.ApplyPropertyValue(TextElement.FontWeightProperty, FontWeights.Normal);
+            else
+                selectedText.ApplyPropertyValue(TextElement.FontWeightProperty, FontWeights.Bold);
             textBox.Focus();
         }
 
@@ -262,10 +207,7 @@ namespace OOP_4_5
                 selectedText.ApplyPropertyValue(TextElement.FontStyleProperty, FontStyles.Normal);                
             else
                 selectedText.ApplyPropertyValue(TextElement.FontStyleProperty, FontStyles.Oblique);
-<<<<<<< HEAD
 
-=======
->>>>>>> add oop_4-5 after crash git)
             textBox.Focus();
 
         }
@@ -277,30 +219,6 @@ namespace OOP_4_5
             textBox.Focus();
         }
 
-<<<<<<< HEAD
-        private void colorPickerButton_Click(object sender, RoutedEventArgs e)
-        {
-            TextSelection selectedText = textBox.Selection;
-
-            if(selectedText.GetPropertyValue(TextElement.ForegroundProperty) == Brushes.Red)
-            {
-                selectedText.ApplyPropertyValue(TextElement.ForegroundProperty, Brushes.Black);
-                colorPickerButton.Background = Brushes.Black;
-            }
-            else
-            {
-                selectedText.ApplyPropertyValue(TextElement.ForegroundProperty, Brushes.Red);
-                colorPickerButton.Background = Brushes.Red;
-            }
-
-            textBox.Focus();
-
-        }
-
-        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            
-=======
         private void colorPicker_Select(object sender, RoutedEventArgs e)
         {
             TextSelection selectedText = textBox.Selection;
@@ -382,7 +300,6 @@ namespace OOP_4_5
             if (i == 1 || i == 2)
                 return;                       
             countWords.Content = "Всего слов: " +  WordCount.countWords(textRange.Text); 
->>>>>>> add oop_4-5 after crash git)
         }
     }
 }
