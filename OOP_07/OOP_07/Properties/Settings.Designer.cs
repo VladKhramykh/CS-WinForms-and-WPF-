@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OOP_06.Properties
+namespace OOP_07.Properties
 {
 
 

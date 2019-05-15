@@ -10,10 +10,10 @@ namespace OOP_4_5
     {
         public static int countWords(string str)
         {
+            
             int count = 0;
-
-            char[] symbols = { ' ', ',', '.', '!', ':', '?', '-' };
-
+            char[] symbols = { ' ', ',', '.', '!', ':', '?', '-', };
+            
             for (int i = 0; i < str.Length; i++)
             {
                 for (int j = 0; j < symbols.Length; j++)

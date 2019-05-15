@@ -7,7 +7,7 @@ using System.Windows.Documents;
 using System.Windows.Media;
 using Xceed.Wpf.Toolkit;
 
-namespace OOP_4_5
+namespace OOP_06
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
