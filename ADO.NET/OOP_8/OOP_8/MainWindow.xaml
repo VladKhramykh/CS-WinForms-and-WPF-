@@ -1,0 +1,44 @@
+﻿<Window x:Class="OOP_8.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OOP_8"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="250" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+
+        <TabControl x:Name ="mainTab" >
+            <TabItem x:Name="kek" Header="Bank Counts">
+                <DataGrid x:Name="bankAccountsGrid" AutoGenerateColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" HorizontalScrollBarVisibility="Auto" CanUserAddRows="False" Margin="0,0,0,0.4" SelectionChanged="BankAccountsGrid_SelectionChanged">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding Id}" IsReadOnly="True" Header="ID" Width="120"/>
+                        <DataGridTextColumn Binding="{Binding OwnerId}" Header="Владелец" Width="120"/>
+                        <DataGridTextColumn Binding="{Binding Balance}" Header="Баланс" Width="120"/>
+                        <DataGridTextColumn Binding="{Binding TypeOfCount}" Header="Тип счета" Width="120"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+        </TabControl>
+
+        <StackPanel HorizontalAlignment="Center"  Grid.Row="1" Orientation="Horizontal">
+            <Button x:Name="addButton" Content="Добавить" Click="addButton_Click" Margin="0 0 10 0" />
+            <Button x:Name="updateButton" Content="Обновить" Click="updateButton_Click" Margin="0 0 10 0" Height="21" VerticalAlignment="Bottom"/>
+            <Button x:Name="deleteButton" Content="Удалить" Click="deleteButton_Click" Margin="0 0 10 0" Height="22" VerticalAlignment="Bottom"/>
+            <!--<Button x:Name="sortButton" Content="Сортировка" Click="sortButton_Click" Margin="0 0 10 0" />-->
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center"  Grid.Row="2" Orientation="Vertical" Margin="0 25 10 0">
+            <TextBox x:Name="nameText" Width="200">Имя</TextBox>
+            
+            <TextBox x:Name="balanceText" Width="200">Баланс</TextBox>
+            <TextBox x:Name="typeText"  Width="200">Тип</TextBox>
+            <Button x:Name="transButton" Content="Транзакция" Click="transButton_Click" Margin="0 0 10 0" HorizontalAlignment="Center"/>
+        
+        </StackPanel>
+    </Grid>
+</Window>
